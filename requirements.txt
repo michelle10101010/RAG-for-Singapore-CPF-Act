@@ -1,0 +1,17 @@
+# Web app
+flask
+
+# PDF reading
+pymupdf
+
+# LangChain RAG components
+langchain
+langchain-core
+langchain-community
+langchain-ollama
+
+# FAISS vector store
+faiss-cpu
+
+# Ollama Python client
+ollama

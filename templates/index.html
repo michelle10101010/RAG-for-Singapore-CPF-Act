@@ -1,0 +1,38 @@
+
+<head>
+    <title>Singapore CPF Act RAG Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <<div class="container">
+        <img src="{{ url_for('static', filename='curious_bear.jpg') }}" 
+             alt="Curious Bear" 
+             class="mascot">
+
+        <h1>Singapore CPF Act RAG Assistant</h1>
+
+        
+
+        <p class="subtitle">
+            Ask Curious Bear a question based on the CPF Act.
+        </p>
+
+        <form method="POST">
+            <textarea 
+                name="question" 
+                placeholder="What does the CPF Act say about CPF contributions by employers?"
+                required>{{ question }}</textarea>
+
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if answer %}
+        <div class="answer-box">
+            <h2>Answer</h2>
+            <div class="answer-text">{{ answer }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
